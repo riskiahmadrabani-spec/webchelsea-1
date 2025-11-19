@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chelsea FC Official Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #034694; /* Warna biru khas Chelsea */
+            color: white;
+            text-align: center;
+            padding: 25px 10px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav {
+            background-color: #0b5394;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #082567;
+        }
+        main {
+            background-color: white;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #034694;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BAGIAN 1: HEADER -->
+    <header>
+        <h1>Chelsea Football Club</h1>
+        <p>"The Blues – Pride of London"</p>
+    </header>
+
+    <!-- MENU NAVIGASI -->
+    <nav>
+        <a href="#" onclick="showPage('home')">Beranda</a>
+        <a href="#" onclick="showPage('profil')">Profil Klub</a>
+        <a href="#" onclick="showPage('pemain')">Daftar Pemain</a>
+        <a href="#" onclick="showPage('prestasi')">Prestasi</a>
+    </nav>
+
+    <!-- BAGIAN 2: MAIN / KONTEN BERUBAH -->
+    <main id="content">
+        <!-- Konten default (beranda) -->
+        <h2>Selamat Datang di Halaman Chelsea FC</h2>
+        <p>
+            Chelsea FC adalah klub sepak bola profesional asal Inggris yang bermarkas di Stamford Bridge, London. 
+            Klub ini didirikan pada tahun <strong>1905</strong> dan dikenal dengan julukan <em>"The Blues"</em>.
+        </p>
+        <img src="https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg" alt="Logo Chelsea FC">
+    </main>
+
+    <!-- BAGIAN 3: FOOTER -->
+    <footer>
+        &copy; 2025 Chelsea FC Fan Page | Dibuat oleh <strong>Rizky ahmad rabbani</strong>
+    </footer>
+
+    <!-- SCRIPT UNTUK GANTI HALAMAN -->
+    <script>
+        function showPage(page) {
+            const content = document.getElementById('content');
+            let html = '';
+
+            if (page === 'home') {
+                html = `
+                    <h2>Selamat Datang di Halaman Chelsea FC</h2>
+                    <p>
+                        Chelsea FC adalah klub sepak bola profesional asal Inggris yang bermarkas di Stamford Bridge, London. 
+                        Klub ini didirikan pada tahun <strong>1905</strong> dan dikenal dengan julukan <em>"The Blues"</em>.
+                    </p>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg" alt="Logo Chelsea FC">
+                `;
+            } else if (page === 'profil') {
+                html = `
+                    <h2>Profil Klub</h2>
+                    <p>
+                        <strong>Nama Lengkap:</strong> Chelsea Football Club<br>
+                        <strong>Didirikan:</strong> 10 Maret 1905<br>
+                        <strong>Stadion:</strong> Stamford Bridge, London<br>
+                        <strong>Manajer:</strong> Enzo Maresca (2025)<br>
+                        <strong>Julukan:</strong> The Blues
+                    </p>
+                    <img src="stadion.webp" alt="Stamford Bridge">
+                `;
+            } else if (page === 'pemain') {
+                html = `
+                    <h2>Daftar Pemain Chelsea 2025</h2>
+                    <ul>
+                        <li>Robert Sánchez – Penjaga Gawang</li>
+                        <li>Reece James – Bek Kanan</li>
+                        <li>Tosin adarabioyo – Bek Tengah</li>
+                        <li>levi colwill – Bek Tengah</li>
+                        <li>Marc Cucurella – Bek Kiri</li>
+                        <li>Enzo Fernández – Gelandang</li>
+                        <li>Moisés Caicedo – Gelandang Bertahan</li>
+                        <li>Cole Palmer – Gelandang serang</li>
+                        <li>Alejandro Garnacho – Sayap kiri</li>
+                        <li>Estêvão Willian – Sayap kanan</li>
+                        <li>Nicolas Jackson – Penyerang</li>
+                    </ul>
+                    <img src="squd.jpg" alt="Pemain Chelsea">
+                `;
+            } else if (page === 'prestasi') {
+                html = `
+                    <h2>Prestasi Chelsea FC</h2>
+                    <p>
+                        Chelsea termasuk salah satu klub tersukses di Inggris dan Eropa dengan berbagai trofi besar:
+                    </p>
+                    <ul>
+                        <li>6x Juara Liga Inggris (Premier League)</li>
+                        <li>8x Piala FA</li>
+                        <li>5x Piala Liga Inggris</li>
+                        <li>2x Liga Champions UEFA (2012, 2021)</li>
+                        <li>2x Liga Eropa UEFA (2013, 2019)</li>
+                        <li>2x Piala Dunia Antarklub FIFA (2021, 2025)</li>
+                    </ul>
+                    <img src="ucl.jpg" alt="Chelsea Juara UCL">
+                `;
+            }
+
+            content.innerHTML = html;
+        }
+    </script>
+
+</body>
+</html>
